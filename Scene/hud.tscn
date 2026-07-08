@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bj8igkr6grr10"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_et0hg"]
+bg_color = Color(0.9150999, 0.4432192, 0.2668883, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gs7re"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1405993430]
+
+[node name="ScorePanel" type="Panel" parent="." unique_id=56559397]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_et0hg")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=932285394]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.84752
+offset_right = 70.84752
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "Test"
+label_settings = SubResource("LabelSettings_gs7re")
+horizontal_alignment = 1
+vertical_alignment = 1
