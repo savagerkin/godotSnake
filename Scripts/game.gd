@@ -9,12 +9,14 @@ var game_started: bool = false
 
 func _ready() -> void:
 	start_game()
-	update_score_label()
-	spawn_beer()
 
 
 func start_game() -> void:
+	score = 0
 	game_started = true
+
+	update_score_label()
+	spawn_beer()
 
 
 func increase_score() -> void:
@@ -24,14 +26,13 @@ func increase_score() -> void:
 
 
 func update_score_label() -> void:
-	score_label.text = str(score)
+	score_label.text = "Score: " + str(score)
 
 
 func spawn_beer() -> void:
-	var beer = beer_scene.instantiate()
+	var beer := beer_scene.instantiate() as Area2D
 
 	beer.collected.connect(increase_score)
-
 	add_child(beer)
 
 	beer.position = Vector2(
