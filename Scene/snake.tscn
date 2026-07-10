@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bfk83w03c2gpn"]
+
+[ext_resource type="Script" uid="uid://ccxq0hbpmkqpr" path="res://Scene/snake.gd" id="1_3kb14"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hlbg6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xussh"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pq12f"]
+
+[node name="Snake" type="RigidBody2D" unique_id=1631401063]
+physics_material_override = SubResource("PhysicsMaterial_hlbg6")
+gravity_scale = 0.0
+script = ExtResource("1_3kb14")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=442648838]
+shape = SubResource("RectangleShape2D_xussh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1894684996]
+position = Vector2(8.34465e-07, -9.536742e-07)
+scale = Vector2(20, 19.999998)
+texture = SubResource("PlaceholderTexture2D_pq12f")

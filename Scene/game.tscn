@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bqpw10sjhvwth"]
+
+[ext_resource type="PackedScene" uid="uid://bfk83w03c2gpn" path="res://Scene/snake.tscn" id="1_mhtsl"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a08nb"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a08nb"]
+
+[node name="Game" type="Node2D" unique_id=475641738]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1803028949]
+position = Vector2(0, 17.86)
+physics_material_override = SubResource("PhysicsMaterial_a08nb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1736201596]
+shape = SubResource("WorldBoundaryShape2D_a08nb")
+
+[node name="Snake" parent="." unique_id=1369659113 instance=ExtResource("1_mhtsl")]
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1991236668]
+zoom = Vector2(3.14, 3.14)
