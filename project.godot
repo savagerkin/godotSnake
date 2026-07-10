@@ -84,3 +84,10 @@ move_right={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+
+[shader_globals]
+
+g_score={
+"type": "int",
+"value": 0
+}

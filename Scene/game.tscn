@@ -1,21 +1,18 @@
 [gd_scene format=3 uid="uid://bqpw10sjhvwth"]
 
-[ext_resource type="PackedScene" uid="uid://bfk83w03c2gpn" path="res://Scene/snake.tscn" id="1_mhtsl"]
+[ext_resource type="Script" uid="uid://c2chaphm3me14" path="res://Scripts/game.gd" id="1_mhtsl"]
+[ext_resource type="PackedScene" uid="uid://bfk83w03c2gpn" path="res://Scene/snake.tscn" id="2_w51g1"]
+[ext_resource type="PackedScene" uid="uid://cvjwyx0parfxx" path="res://Scene/beer.tscn" id="3_4jv7b"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a08nb"]
+[node name="Game" type="Node2D" unique_id=475641738 node_paths=PackedStringArray("score_label")]
+script = ExtResource("1_mhtsl")
+score_label = NodePath("ScoreLabel")
+beer_scene = ExtResource("3_4jv7b")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a08nb"]
-
-[node name="Game" type="Node2D" unique_id=475641738]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1803028949]
-position = Vector2(0, 17.86)
-physics_material_override = SubResource("PhysicsMaterial_a08nb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1736201596]
-shape = SubResource("WorldBoundaryShape2D_a08nb")
-
-[node name="Snake" parent="." unique_id=1369659113 instance=ExtResource("1_mhtsl")]
+[node name="Snake" parent="." unique_id=1369659113 instance=ExtResource("2_w51g1")]
 
 [node name="Camera" type="Camera2D" parent="." unique_id=1991236668]
-zoom = Vector2(3.14, 3.14)
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1654095282]
+offset_right = 40.0
+offset_bottom = 23.0

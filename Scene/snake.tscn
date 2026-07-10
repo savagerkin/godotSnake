@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfk83w03c2gpn"]
 
-[ext_resource type="Script" uid="uid://ccxq0hbpmkqpr" path="res://Scene/snake.gd" id="1_3kb14"]
+[ext_resource type="Script" uid="uid://ccxq0hbpmkqpr" path="res://Scripts/snake.gd" id="1_3kb14"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hlbg6"]
 
@@ -11,6 +11,8 @@
 [node name="Snake" type="RigidBody2D" unique_id=1631401063]
 physics_material_override = SubResource("PhysicsMaterial_hlbg6")
 gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
 script = ExtResource("1_3kb14")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=442648838]
