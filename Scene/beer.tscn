@@ -4,11 +4,18 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pq12f"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a08nb"]
+
 [node name="Beer" type="Area2D" unique_id=1070056326]
 script = ExtResource("1_88i5t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1884427445]
 shape = SubResource("CapsuleShape2D_pq12f")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1666312239]
+position = Vector2(4.7683716e-07, -4.7683716e-07)
+scale = Vector2(20, 29.999998)
+texture = SubResource("PlaceholderTexture2D_a08nb")
 
 [connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

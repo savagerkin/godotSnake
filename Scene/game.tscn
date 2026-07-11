@@ -1,18 +1,19 @@
 [gd_scene format=3 uid="uid://bqpw10sjhvwth"]
 
 [ext_resource type="Script" uid="uid://c2chaphm3me14" path="res://Scripts/game.gd" id="1_mhtsl"]
-[ext_resource type="PackedScene" uid="uid://bfk83w03c2gpn" path="res://Scene/snake.tscn" id="2_w51g1"]
 [ext_resource type="PackedScene" uid="uid://cvjwyx0parfxx" path="res://Scene/beer.tscn" id="3_4jv7b"]
+[ext_resource type="PackedScene" uid="uid://bfk83w03c2gpn" path="res://Scene/snake.tscn" id="4_03iqk"]
 
 [node name="Game" type="Node2D" unique_id=475641738 node_paths=PackedStringArray("score_label")]
 script = ExtResource("1_mhtsl")
 score_label = NodePath("ScoreLabel")
 beer_scene = ExtResource("3_4jv7b")
 
-[node name="Snake" parent="." unique_id=1369659113 instance=ExtResource("2_w51g1")]
-
 [node name="Camera" type="Camera2D" parent="." unique_id=1991236668]
+zoom = Vector2(5, 5)
 
 [node name="ScoreLabel" type="Label" parent="." unique_id=1654095282]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Snake" parent="." unique_id=863534069 instance=ExtResource("4_03iqk")]
