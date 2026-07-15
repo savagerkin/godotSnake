@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://cvjwyx0parfxx"]
 
 [ext_resource type="Script" uid="uid://c6aroq6qxa64p" path="res://Scripts/beer.gd" id="1_88i5t"]
+[ext_resource type="Texture2D" uid="uid://ct10biuxdb2o8" path="res://Assets/Images/beer.png" id="2_m2sj5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pq12f"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a08nb"]
 
 [node name="Beer" type="Area2D" unique_id=1070056326]
 script = ExtResource("1_88i5t")
@@ -13,9 +12,9 @@ script = ExtResource("1_88i5t")
 shape = SubResource("CapsuleShape2D_pq12f")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1666312239]
-position = Vector2(4.7683716e-07, -4.7683716e-07)
-scale = Vector2(20, 29.999998)
-texture = SubResource("PlaceholderTexture2D_a08nb")
+position = Vector2(-2.842171e-14, -2)
+scale = Vector2(0.0091, 0.014560001)
+texture = ExtResource("2_m2sj5")
 
 [connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
