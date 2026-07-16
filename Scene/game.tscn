@@ -18,5 +18,6 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="Snake" parent="." unique_id=863534069 instance=ExtResource("4_03iqk")]
+speed = 6.0
 segment_scene = ExtResource("4_ihreq")
-segment_distance = 1
+self_collision_distance = 1.0
