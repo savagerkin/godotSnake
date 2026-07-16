@@ -37,8 +37,8 @@ func _spawn_beer() -> void:
 	var margin := 10.0
 
 	beer.position = Vector2(
-		randf_range(-100.0 + margin, 100.0 - margin),
-		randf_range(-100.0 + margin, 100.0 - margin)
+		randf_range(-5.0 + margin, 5.0 - margin),
+		randf_range(-5.0 + margin, 5.0 - margin)
 	)
 
 #Function updates the score label.
